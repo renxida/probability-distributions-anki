@@ -104,7 +104,7 @@ ks
 #          'Method of Moments': 2})
 
 my_model = genanki.Model(
-  932847043,
+  1320829343,
   'Probability Distribution',
   fields=[
     {'name': k} for k in ks
@@ -112,27 +112,32 @@ my_model = genanki.Model(
   templates=[
     {
       'name': 'Name2Mean',
-      'qfmt': 'What is the mean of {{Name}} with parameters: {{Parameters}}?',
+      'qfmt': 'What is the mean of a {{Name}}?',
       'afmt': '{{FrontSide}}<hr id="answer">{{Mean}}',
     },
     {
+      'name': 'Name2Parameters',
+      'qfmt': 'What are the parameters of a {{Name}}?',
+      'afmt': '{{FrontSide}}<hr id="answer">{{Parameters}}',
+    },
+    {
       'name': 'Name2Variance',
-        'qfmt': 'What is the variance of {{Name}} with parameters: {{Parameters}}?',
+        'qfmt': 'What is the variance of a {{Name}}?',
         'afmt': '{{FrontSide}}<hr id="answer">{{Variance}}',
     },
     {
         'name': 'Name2CDF',
-        'qfmt': 'What is the CDF of {{Name}} with parameters: {{Parameters}}?',
+        'qfmt': 'What is the CDF of a {{Name}}?',
         'afmt': '{{FrontSide}}<hr id="answer">{{CDF}}',
     },
     {
         'name': 'Name2PMF',
-        'qfmt': 'What is the PMF of {{Name}} with parameters: {{Parameters}}?',
+        'qfmt': 'What is the PMF of a {{Name}}?',
         'afmt': '{{FrontSide}}<hr id="answer">{{PMF}}',
     },
     {
         'name': 'Name2PDF',
-        'qfmt': 'What is the PDF of {{Name}} with parameters: {{Parameters}}?',
+        'qfmt': 'What is the PDF of a {{Name}}?',
         'afmt': '{{FrontSide}}<hr id="answer">{{PDF}}',
     },
     {
@@ -158,14 +163,13 @@ my_model = genanki.Model(
   ])
 
 
-
 notes = [
     [data[k] if k in data else "" for k in ks] for data in data_list
 ]
 
 
 # %%
-my_deck = genanki.Deck(1293847938, "Cedar's Probability Distributions")
+my_deck = genanki.Deck(2035271820, "Cedar's Probability Distributions")
 
 for note in notes:
     my_note = genanki.Note(
